@@ -2,11 +2,14 @@
 	<el-config-provider :locale="zhCn">
 		<nav class="flex dj-nav">
 			<div class="icon flex fxmiddle pl10">
-				<img src="https://mulan.diumx.com/img/dt-7.png" alt="">
+				<img src="https://mulan.diumx.com/img/dt-7.png" alt="" />
 				<div>
 					<b>李白</b>
 					<p class="fsize12 fc999">基于ElementUI Plus的表单生成器</p>
 				</div>
+			</div>
+			<div class="flex1 txright pr10" style="line-height: 49px">
+				<a class="fc999 fsize14" target="blank" href="https://beian.miit.gov.cn">豫ICP备18004249号-2</a>
 			</div>
 		</nav>
 		<div class="full-content hideit flex">
@@ -44,7 +47,7 @@ const config = reactive({
 	height: 49px;
 	border-bottom: 1px solid #eee;
 	.icon {
-		img{
+		img {
 			height: 28px;
 		}
 	}
