@@ -8,7 +8,7 @@
 					<p class="fsize12 fc999">基于ElementUI Plus的表单生成器</p>
 				</div>
 			</div>
-			<div class="flex1 txright pr10" style="line-height: 49px">
+			<div class="flex1 txright pr10" style="line-height: 49px">滑块
 				<a class="fc999 fsize14" target="blank" href="https://beian.miit.gov.cn">豫ICP备18004249号-2</a>
 			</div>
 		</nav>
@@ -18,6 +18,9 @@
 			<dj-sets :config="config"></dj-sets>
 			<!-- <re></re> -->
 		</div>
+		<el-dialog v-model="dialogVisible" title="弹窗预览">
+			<dj-main :config="config" v-if="dialogVisible"></dj-main>
+		</el-dialog>
 	</el-config-provider>
 </template>
 <script lang="ts" setup>
@@ -26,6 +29,11 @@ import djSets from './views/sets/index.vue'
 import djMain from './views/main/index.vue'
 import djAside from './views/aside/index.vue'
 // import re from './views/main/render.vue'
+
+let dialogVisible = ref(false)
+// setTimeout(() => {
+// 	dialogVisible.value = true
+// }, 10000)
 const config = reactive({
 	currentElement: {},
 	elements: [],
